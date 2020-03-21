@@ -1,0 +1,3 @@
+[submodule "third_party/cmake_modules"]
+	path = third_party/cmake_modules
+	url = git@github.com:franklange/cmake_modules.git
