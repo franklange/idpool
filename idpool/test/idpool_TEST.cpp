@@ -65,4 +65,10 @@ TEST_F(IdPoolTest, reset)
     EXPECT_EQ(0, m_pool.next());
 }
 
+TEST_F(IdPoolTest, custom_init_value)
+{
+    idpool_st_t idp{17};
+    EXPECT_EQ(17, idp.next());
+}
+
 } // namespace idp::test

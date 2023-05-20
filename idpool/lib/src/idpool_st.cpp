@@ -5,6 +5,10 @@
 
 namespace idp {
 
+idpool_st_t::idpool_st_t(const id_t s)
+    : m_new{s}
+{}
+
 auto idpool_st_t::next() -> id_t
 {
     if (!m_released.empty())

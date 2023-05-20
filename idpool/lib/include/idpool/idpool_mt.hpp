@@ -11,6 +11,8 @@ namespace idp {
 class idpool_mt_t : public idpool
 {
 public:
+    idpool_mt_t(id_t start = 0);
+
     auto next() -> id_t override;
     void release(id_t) override;
 

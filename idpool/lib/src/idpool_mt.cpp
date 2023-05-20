@@ -5,6 +5,10 @@
 
 namespace idp {
 
+idpool_mt_t::idpool_mt_t(const id_t s)
+    : m_pool{s}
+{}
+
 auto idpool_mt_t::next() -> id_t
 {
     const Lock l{m_mutex};
