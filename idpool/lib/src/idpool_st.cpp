@@ -24,6 +24,11 @@ auto idpool_st_t::next() -> id_t
     return m_new++;
 }
 
+auto idpool_st_t::peek() -> id_t
+{
+    return m_new;
+}
+
 void idpool_st_t::release(const id_t id)
 {
     if (id >= m_new)

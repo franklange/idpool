@@ -71,4 +71,12 @@ TEST_F(IdPoolTest, custom_init_value)
     EXPECT_EQ(17, idp.next());
 }
 
+TEST_F(IdPoolTest, peek)
+{
+    EXPECT_EQ(0, m_pool.peek());
+    
+    m_pool.next();
+    EXPECT_EQ(1, m_pool.peek());
+}
+
 } // namespace idp::test

@@ -15,6 +15,12 @@ auto idpool_mt_t::next() -> id_t
     return m_pool.next();
 }
 
+auto idpool_mt_t::peek() -> id_t
+{
+    const Lock l{m_mutex};
+    return m_pool.peek();
+}
+
 void idpool_mt_t::release(const id_t id)
 {
     const Lock l{m_mutex};

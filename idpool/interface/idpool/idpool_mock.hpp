@@ -8,6 +8,7 @@ namespace idp {
 struct idpool_mock : idpool_base
 {
     MOCK_METHOD(id_t, next, (), (override));
+    MOCK_METHOD(id_t, peek, (), (override));
     MOCK_METHOD(void, release, (id_t), (override));
     MOCK_METHOD(void, reset, (), (override));
 };
